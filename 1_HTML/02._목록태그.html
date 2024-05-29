@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록태그</title>
+</head>
+<body>
+    <!-- ul : Unordered List의 줄임말-->
+    <h2>ul: 순서없는 목록 태그</h2>
+      <ul>
+        <li style="color:red">HTML</li>
+        <li style="color:green">CSS</li>
+        <li style="color:blue">JavaScript</li>   
+    </ul>
+
+    <h3>중첩으로 사용 가능</h3>
+    <ul>
+        <li style="color:red">HTML
+        <ul>
+            <li style="color:purple">글자태그</li>
+            <li style="color:orange">목록태그</li>
+        </ul>
+        </li>
+        <li style="color:green">CSS</li>
+        <li style="color:blue">JavaScript</li>   
+    </ul>
+  
+   <!--  ol : Ordered List의 줄임말-->
+   <h2>ol: 순서있는 목록 태그</h2>
+   <!-- ol>li*3 : 리스트 자동 생성-->
+    <ol> 
+     <li style="color:red">HTML</li>
+     <li li style="color:green">CSS</li>
+     <li style="color:blue">JavaScript</li>
+    </ol>
+    <!--
+        - start : 항목의 시작 번호 변경 (기본값은 1)
+        - type : 항목 앞에 표시되는 숫자의 종류 변경
+        - reversed : 항목을 역순으로 표시 (앞 두가지와 다르게 속성 값이 없음)
+    * 해당 태그들도 중첩 가능!   
+    -->
+    <h3>시작번호 설정 가능</h3>
+    <ol start="4"> 
+        <li style="color:red">HTML</li>
+        <li li style="color:green">CSS</li>
+        <li style="color:blue">JavaScript</li>
+       </ol>
+
+    <h3>숫자 타입 변경 가능</h3>
+    <!-- 타입 외울필요 없음 ctrl + space 사용하면 종류 나옴-->
+    <ol type="i"> 
+        <li style="color:red">HTML</li>
+        <li li style="color:green">CSS</li>
+        <li style="color:blue">JavaScript</li>
+       </ol>
+    
+    <h3>역순으로 표시</h3>
+    <ol reversed> 
+        <li style="color:red">HTML</li>
+        <li li style="color:green">CSS</li>
+        <li style="color:blue">JavaScript</li>
+       </ol>
+
+<hr>
+
+   <!--
+        - dl(Description List) : 정의 목록
+        - dt(Description Term) : 목록에 대한 정의
+        - dd(Definition Description) : 정의 목록의 항목
+   -->
+   <h2>설명과 관련된 목록 태그<br>
+    (주로 용어에 대해서 정의할 때)
+    <dl>
+        <dt>HTML5</dt>
+        <ul>
+            <li><dd><small>HTML5는 웹에서 정보를 표현할 목적으로 만든 마크업 언어이다.</small></dd></li>
+        </ul>
+        <dt>CSS</dt>
+        <dd><small>CSS는 HTML과 함께 웹 표준의 하나이다.</small></dd>
+        <dd><small>미리 약속된 스타일 속성을 사용해서 레이아웃과 스타일을 정의한다.</small></dd>
+    </dl>
+   </h2>
+</body>
+</html>
