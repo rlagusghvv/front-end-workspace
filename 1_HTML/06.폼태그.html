@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 태그</title>
+  </head>
+  <body>
+    <h2>폼 태그의 기본 구조</h2>
+    <!-- 사용자에게 입력을 받을 수 있는 태그 (사용자와 상호작용이 있음)
+ex) 검색창, 홈페이지 회원가입 및 로그인 페이지
+	•	action: 폼 데이터를 처리할 서버 측 스크립트의 URL을 지정합니다.
+	•	method: 폼 데이터를 전송하는 HTTP 메서드를 지정합니다. 주로 GET 또는 POST를 사용합니다.
+	•	GET: 데이터를 URL의 쿼리 스트링으로 전송합니다. 주로 데이터를 검색하거나 조회할 때 사용합니다. <일반적인 검색 기능 사용 시>
+	•	POST: 데이터를 요청 본문에 포함하여 전송합니다. 주로 데이터를 제출하거나 수정할 때 사용합니다.<보안상의 문제가 있는 개인정보 등을 제출 받을때>
+	•	enctype: 폼 데이터의 인코딩 타입을 지정합니다. 파일 업로드 시 multipart/form-data를 사용합니다.
+-->
+    <h3>검색 폼</h3>
+    <form action="" method="get">
+      <label for="search">
+        무엇이든 물어보세요<br />
+        <input type="text" name="query" id="search" />
+        <input type="submit" value="검색" />
+      </label>
+      <label> <input type="radio" name="군필여부" value="군필" /> 군필 </label>
+      <label> <input type="radio" name="군필여부" value="미필" /> 미필 </label>
+      <label>
+        <input type="checkbox" name="submit" value="personal data" /> 개인정보
+        제공 동의
+      </label>
+    </form>
+    <h3>회원가입 폼</h3>
+    <form action="/signup" method="post">
+      <label for="username">사용자 이름:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="email">이메일:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">비밀번호:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="gender">성별:</label>
+      <select id="gender" name="gender" required>
+        <option value="male">남성</option>
+        <option value="female">여성</option>
+        <option value="other">기타</option>
+      </select>
+
+      <label>취미:</label>
+      <label
+        ><input type="checkbox" name="hobbies" value="reading" /> 독서</label
+      >
+      <label
+        ><input type="checkbox" name="hobbies" value="traveling" /> 여행</label
+      >
+      <label
+        ><input type="checkbox" name="hobbies" value="sports" /> 스포츠</label
+      >
+
+      <input type="submit" value="가입하기" />
+    </form>
+  </body>
+</html>
