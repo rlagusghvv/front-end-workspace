@@ -6,6 +6,13 @@
     <title>테이블 태그</title>
   </head>
   <body>
+    <!--
+    1.	<table>: 표를 정의합니다.
+	2.	<tr>: 표의 행을 정의합니다.
+	3.	<th>: 표의 헤더 셀을 정의합니다. 기본적으로 텍스트가 굵게 표시되고 가운데 정렬됩니다.
+	4.	<td>: 표의 데이터 셀을 정의합니다.
+    5. 속성 border : 표의 라인을 만들어줌(표의 형태를 띄도록)
+    -->
     <h1>기본적인 표 만들기</h1>
     <table border="1">
       <tr>
@@ -23,6 +30,61 @@
         <td>Apple</td>
         <td>http://apple.com</td>
       </tr>
+    </table>
+    <h2>표와 행과 열을 합치는 속성</h2>
+    <table border="1">
+      <tr>
+        <td rowspan="2" width="50">사진</td>
+        <td width="50">이름</td>
+        <td width="300">루이바오 & 후이바오</td>
+      </tr>
+      <tr>
+        <td>연락처</td>
+        <td>010-1234-5678</td>
+      </tr>
+      <tr>
+        <td colspan="2" height="30">주소</td>
+        <td>경기도 용인 에버랜드 판다월드</td>
+      </tr>
+      <tr>
+        <td colspan="2" height="30">자기소개</td>
+        <td>우리는 개발자를 꿈꾸는 판다! 할 수 있지~~</td>
+      </tr>
+    </table>
+    <h2>테이블 내에 구조 나누기</h2>
+    <!--테이블의 명칭을 작성할 때 쓰는 태그 <caption></caption>-->
+    <table border="1">
+      <caption>
+        바오패밀리 친구들
+      </caption>
+      <thead>
+        <th width="50">이름</th>
+        <th width="50">나이</th>
+        <th width="80">주소</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>코식이</td>
+          <td>33</td>
+          <td>경기도 용인</td>
+        </tr>
+        <tr>
+          <td>제돌이</td>
+          <td>11</td>
+          <td>제주도</td>
+        </tr>
+        <tr>
+          <td>세로</td>
+          <td>4</td>
+          <td>서울 광진구</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2"><b>총마리수</b></td>
+          <td>3</td>
+        </tr>
+      </tfoot>
     </table>
   </body>
 </html>
