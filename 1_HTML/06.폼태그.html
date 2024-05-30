@@ -7,14 +7,117 @@
   </head>
   <body>
     <h2>폼 태그의 기본 구조</h2>
-    <!-- 사용자에게 입력을 받을 수 있는 태그 (사용자와 상호작용이 있음)
+    <h3>검색 폼</h3>
+    <form action="" method="get">
+      <!-- <form>: 폼을 정의하는 태그, action 속성은 폼 데이터를 전송할 URL을 지정, method 속성은 전송 방식을 지정 -->
+      <label for="search"> 검색할 내용 :</label>
+      <!-- <label>: 폼 요소에 대한 설명을 제공, for 속성은 연결할 입력 필드의 id를 지정 -->
+      <input type="text" name="keyword" id="search" />
+      <!-- <input>: 사용자가 데이터를 입력할 수 있는 다양한 유형의 입력 필드를 정의, type 속성은 입력 필드의 유형을 지정 -->
+
+      <input type="submit" value="검색" />
+      <!-- <input type="submit">: 폼 데이터를 서버로 전송하는 버튼을 정의, value 속성은 버튼에 표시될 텍스트를 지정 -->
+    </form>
+
+    <h3>회원가입 폼</h3>
+    <form action="" method="post">
+      <fieldset>
+        <!-- <fieldset>: 폼 요소를 그룹화하여 시각적으로 구분할 수 있도록 함 -->
+        <legend>회원정보</legend>
+        <!-- <legend>: <fieldset> 요소의 제목을 정의 -->
+        <label for="id">아이디 : </label>
+        <input type="text" name="id" id="id" placeholder="아이디" required />
+        <!-- placeholder 속성: 입력 필드에 힌트 텍스트를 표시, required 속성: 필수 입력 필드임을 지정 -->
+        <br /><br />
+        <label for="pwd">패스워드 : </label>
+        <input
+          type="password"
+          name="pwd"
+          id="pwd"
+          placeholder="비밀번호"
+          autofocus
+        />
+        <!-- type="password": 비밀번호 입력 필드를 정의, autofocus 속성: 페이지 로드 시 자동으로 포커스를 설정 -->
+      </fieldset>
+      <fieldset>
+        <legend>배송정보</legend>
+        <label for="name">수령인 : </label>
+        <input type="text" name="name" id="name" />
+        <br /><br />
+        <label for="addr">주소 : </label>
+        <input
+          type="text"
+          name="address"
+          id="addr"
+          value="서울 강남구"
+          readonly
+        />
+        <!-- value 속성: 입력 필드의 기본값을 지정, readonly 속성: 필드를 읽기 전용으로 설정 -->
+      </fieldset>
+      <input type="submit" value="회원가입" />
+      <!-- <input type="submit">: 폼 데이터를 서버로 전송 -->
+      <input type="reset" value="초기화" />
+      <!-- <input type="reset">: 입력 필드의 값을 초기화 -->
+      <input type="button" value="버튼" onclick="alert('버튼 클릭!')" />
+      <!-- <input type="button">: 사용자 정의 버튼을 생성, onclick 속성: 버튼 클릭 시 실행할 JavaScript 코드를 지정 -->
+    </form>
+
+    <h3>type="radio|checkbox"</h3>
+    <form action="">
+      <fieldset>
+        <legend>성별</legend>
+        <label> <input type="radio" name="gender" value="M" /> 남자 </label>
+        <!-- <input type="radio">: 라디오 버튼을 정의, name 속성: 동일한 그룹 내에서 하나의 선택만 가능하게 함 -->
+        <br />
+        <label> <input type="radio" name="gender" value="F" /> 여자 </label>
+      </fieldset>
+      <fieldset>
+        <legend>관심사</legend>
+        <label>
+          <input type="checkbox" name="interest" value="movie" /> 영화
+        </label>
+        <!-- <input type="checkbox">: 체크박스를 정의, 여러 개의 선택이 가능 -->
+        <label>
+          <input type="checkbox" name="interest" value="exercise" /> 운동
+        </label>
+        <label>
+          <input type="checkbox" name="interest" value="game" /> 게임
+        </label>
+        <label>
+          <input type="checkbox" name="interest" value="alcohol" /> 술
+        </label>
+      </fieldset>
+      <input type="submit" />
+    </form>
+
+    <h3>type="hidden|file"</h3>
+    <form action="">
+      <input type="hidden" name="hiddenValue" value="1234" />
+      <!-- <input type="hidden">: 사용자에게 보이지 않는 데이터를 폼에 포함 -->
+      <input type="file" multiple accept="image/*, .mp4" />
+      <!-- <input type="file">: 파일 업로드 필드를 정의, multiple 속성: 여러 파일 선택 가능, accept 속성: 허용되는 파일 타입을 지정 -->
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 태그</title>
+  </head>
+  <body>
+    <h2>폼 태그의 기본 구조</h2>
+   사용자에게 입력을 받을 수 있는 태그 (사용자와 상호작용이 있음)
 ex) 검색창, 홈페이지 회원가입 및 로그인 페이지
 	•	action: 폼 데이터를 처리할 서버 측 스크립트의 URL을 지정합니다.
 	•	method: 폼 데이터를 전송하는 HTTP 메서드를 지정합니다. 주로 GET 또는 POST를 사용합니다.
 	•	GET: 데이터를 URL의 쿼리 스트링으로 전송합니다. 주로 데이터를 검색하거나 조회할 때 사용합니다. <일반적인 검색 기능 사용 시>
 	•	POST: 데이터를 요청 본문에 포함하여 전송합니다. 주로 데이터를 제출하거나 수정할 때 사용합니다.<보안상의 문제가 있는 개인정보 등을 제출 받을때>
 	•	enctype: 폼 데이터의 인코딩 타입을 지정합니다. 파일 업로드 시 multipart/form-data를 사용합니다.
--->
+
     <h3>검색 폼</h3>
     <form action="" method="get">
       <label for="search">
@@ -59,6 +162,11 @@ ex) 검색창, 홈페이지 회원가입 및 로그인 페이지
       >
 
       <input type="submit" value="가입하기" />
+
+      <textarea style="resize: none"></textarea>
+      reset, button 
+      <button type="submit">전송</button>
     </form>
   </body>
 </html>
+-->

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시맨틱 태그</title>
+    <!--주요 영역 태그
+
+	1.	<header>: 문서나 섹션의 머리글을 정의합니다. 로고, 제목, 탐색 링크 등이 포함될 수 있습니다.
+	2.	<nav>: 내비게이션 링크를 정의합니다. 사이트의 주요 링크 모음을 포함합니다.
+	3.	<main>: 문서의 주요 콘텐츠를 정의합니다. 문서에서 주요 부분을 나타내며, 페이지의 주요 내용이 포함됩니다.
+	4.	<section>: 문서의 일반 섹션을 정의합니다. 주제와 관련된 콘텐츠 그룹을 나타냅니다.
+	5.	<article>: 독립적으로 구분되는 콘텐츠를 정의합니다. 뉴스 기사, 블로그 포스트, 사용자 리뷰 등을 나타냅니다.
+	6.	<aside>: 문서의 주 콘텐츠와 관련성이 적은 콘텐츠를 정의합니다. 사이드바, 광고, 인용문 등이 포함될 수 있습니다.
+	7.	<footer>: 문서나 섹션의 바닥글을 정의합니다. 저작권 정보, 연락처 정보, 사이트맵 등이 포함될 수 있습니다.
+	8.	<address>: 연락처 정보를 정의합니다. 문서나 소유자의 연락 정보를 포함합니다.
+
+    -->
+  </head>
+  <body>
+    <h2>레이아웃 1 : div</h2>
+    <div id="header"></div>
+    <h1>LOGO</h1>
+    <div id="GNB">GNB</div>
+    <div id="main">Main</div>
+    <div id="section">Section</div>
+    <!--id의 상위 범주 class. class는 중복 사용 가능-->
+    <div id="aritcle1" class="article"></div>
+    <div id="aritcle2" class="article"></div>
+    <div id="aside">Ads</div>
+    <div id="footer">Info</div>
+    <h2>레이아웃 2 : Semantic Tag</h2>
+    <!--
+        header
+        - 페이지의 독자적인 요소
+        - 로고, GNB 등
+        - 주로 페이지 안내(이동)에 관한 요소가 포함됨
+    -->
+    <header></header>
+    <h1>LOGO</h1>
+    <!--
+        nav
+        - 페이지 링크, 내부 링크가 있는 영역에 사용
+        - 메인 내비게이션에서 사용
+    -->
+    <nav>GNB</nav>
+    <!--
+        main
+        - 주요 내용 정의
+        - (대체적으로)페이지 내에 한 번만 사용
+        - LNB : Local Navigation Bar - 사이드 메뉴 (해당 페이지 내에서만 쓰이는 메뉴바)
+    -->
+    <main>Main</main>
+    <!-- 
+        section
+        - 단락, 이미지, 제목 등 콘텐츠를 묶어서 구성할 때 사용
+        - class나 id 속성을 사용하여 영역을 구분
+    -->
+    <section>
+      Section
+      <!--
+        article
+        - 페이지 내용상 별개 내용을 구성할 때 사용
+        - section 대신 사용해도 무방!
+    -->
+      <article>id="aritcle1"</article>
+      <article>id="aritcle2"</article>
+    </section>
+    <!--
+      aside
+      - 본문 내용에 대한 추가적인 설명
+      - 부수적인 콘텐츠 표시에 사용
+    -->
+    <aside>Ads</aside>
+    <!--
+      footer
+      - 회사 정보나 사이트에 대한 정보
+      - 저작권, 개인정보 보호정책, 연락처, 관리자 정보 카피라이트 등
+    -->
+    <footer>Info</footer>
+  </body>
+</html>
