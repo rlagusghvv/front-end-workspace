@@ -1,0 +1,20 @@
+div {
+  /*!important : 강제로 우선순위를 최상위로 올리기! (가급적 사용 x)*/
+  background: teal !important;
+  color: white !important;
+  width: 200px;
+  height: 200px;
+}
+#id1 {
+  background: yellow;
+  color: black;
+}
+.class1 {
+  background: red;
+  color: blue;
+}
+div {
+  background: pink;
+}
+/* 마지막 선택자에 대한 스타일이 항상 우선 */
+/* inline 선택자 (html) > id 선택자 (css) > class 선택자 > 태그 선택자 */
