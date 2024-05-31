@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/02.선택자.css" />
+  </head>
+  <body>
+    <h3>1. 전체 선택자 : *</h3>
+    <p>현재 해당 페이지 내에 모든 태그들을 다 선택하고자 할 때 사용!</p>
+    <h3>2. 태그 선택자 : 태그</h3>
+    <p>현재 해당 페이지에 해당 태그들을 다 선택하고자 할 때 사용</p>
+    <h3>3. 클래스 선택자 : .클래스명</h3>
+    <div class="class2">
+      <p class="class1">
+        해당 페이지에 내가 원하는 요소 "여러개" 선택하고자 할때 사용
+      </p>
+      <!--ul>li{클래스선택자$}*5
+    {}내 글자를 담은 li를 순차대로 생성-->
+      <ul>
+        <li class="class1">클래스선택자1</li>
+        <li class="class2">클래스선택자2</li>
+        <li class="class1 class2">클래스선택자3</li>
+        <li>클래스선택자4</li>
+        <li class="class1">클래스선택자5</li>
+      </ul>
+    </div>
+    <!--#아이디명 {}-->
+    <h3>4. 아이디 선택자 : #아이디명</h3>
+    <p id="elemental">
+      현재 해당 페이지에 특정 html 요소 "하나만"을 선택하고자 할 때 사용
+    </p>
+    <h3>5. 그룹 선택자</h3>
+    <p>콤마(,)를 사용하여 여러 요소를 선택할 때 사용</p>
+    <!--#select1-->
+    <div id="select1">div 태그 입니다.</div>
+    <!--p#select2-->
+    <p id="select2">p 태그입니다.</p>
+
+    <h3>6. 자식선택자와 자손선택자</h3>
+    <p>
+      요소들이 중첩되어 작성 가능<br />
+      자식(>) : 바로 하위인 요소들 / 자손( ) : 하위 요소들 전부 다
+    </p>
+    <div id="test1">
+      <h4>div의 자식인 동시에 자손</h4>
+      <ul>
+        <li>ul의 자식이면서 div의 자손</li>
+        <ul>
+          <li>ul의 자식이면서 div의 자손</li>
+          <li>ul의 자식이면서 div의 자손</li>
+        </ul>
+      </ul>
+    </div>
+    <h3>7. 속성 선택자</h3>
+    <p>
+      선택하고자 하는 요소내에 작성되어 있는 속성을 이용해서 선택<br />
+      선택자 뒤에 []를 이용해서 속성과 속성값을 선택
+    </p>
+    <!-- .div-class*3 -->
+    <div class="div-class" name="name1">div1</div>
+    <div class="div-class" name="name2">div2</div>
+    <div class="div-class" name="name3 name1">div3</div>
+    <!-- .class-div -->
+    <div class="class-div" name="name3">div4</div>
+
+    <h3>8. 형제 선택자</h3>
+    <p>같은 레벨에 있는 "뒤"에 위치한 특정 요소를 선택할 떄 사용</p>
+    <div id="test2">div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <p>p</p>
+    <div>div5</div>
+
+    <h3>9. 반응 선택자</h3>
+    <p>사용자의 움직임에 따라 선택되는 선택자</p>
+    <!--#active-test.area-->
+    <div id="active-test" class="area">active 테스트</div>
+    <!--#hover-test.area-->
+    <div id="hover-test" class="area">hover 테스트</div>
+    <br />
+    아이디 : <input type="text" name="userId" />
+
+    <h3>10. 상태 선택자</h3>
+    <p>요소의 상태에 따라서 선택되는 선택자</p>
+    <input type="checkbox" checked /> 사과
+    <input type="checkbox" unchecked /> 바나나 <br /><br />
+    <button>클릭가능</button>
+    <button disabled>클릭 불가능</button>
+
+    <h3>11. 구조 선택자</h3>
+    <p>페이지 구조를 기준으로 특정 위치에 있는 요소를 찾아 선택할 떄 사용</p>
+    <div id="test3">
+      <ul class="test3-menu">
+        <!--(li>{list $})*10-->
+        <li>list 1</li>
+        <p>p item!!</p>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+        <li>list 5</li>
+        <li>list 6</li>
+        <li>list 7</li>
+        <li>list 8</li>
+        <li>list 9</li>
+        <li>list 10</li>
+      </ul>
+    </div>
+    <h3>12. 가상 요소 선택자</h3>
+    <p>선택한 요소 내용 앞(before)/뒤(after)에 지정한 내용을 넣을 때 사용</p>
+    <div id="test4">
+      <p>TEXT</p>
+    </div>
+  </body>
+</html>
