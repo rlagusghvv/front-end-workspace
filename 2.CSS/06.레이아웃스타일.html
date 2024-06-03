@@ -65,5 +65,36 @@
     <div class="display display-inline-block">5 번째 영역</div>
 
     <h2>포지셔닝</h2>
+    <p>CSS를 이용해서 여러 요소를 원하는 위치에 적절하게 배치하는 것</p>
+
+    <h3>float, clear</h3>
+    <div class="float">001</div>
+    <div class="float">002</div>
+    <div class="float">003</div>
+    <div class="float">004</div>
+    <div class="float">005</div>
+
+    <!-- float 사용 시 생기는 공간 중복 현상을 방지하려면 그 다음에 나오는 요소에 "clear : both"를 넣어주면 됨 -->
+    <h3 style="clear: both">position</h3>
+
+    <div id="outer">
+      <div id="first"></div>
+      <div id="second"></div>
+    </div>
+    <div id="fixed"></div>
+
+    <h3>visibility</h3>
+    <p>요소를 화면에 보이거나 보이지 않게 하는 속성</p>
+    <div class="visibility" id="vis1"></div>
+    <div class="visibility" id="vis2"></div>
+
+    <h3>z-index</h3>
+    <p>요소 위에 요소를 쌓을 때 쌓는 순서를 지정하는 속성</p>
+    <div id="z-outer">
+      <div class="z-index" id="z-index1"></div>
+      <div class="z-index" id="z-index2"></div>
+      <div class="z-index" id="z-index3"></div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
 </html>

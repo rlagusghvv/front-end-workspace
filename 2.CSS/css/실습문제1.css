@@ -1,0 +1,106 @@
+font-family {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+#background {
+  background-color: cornflowerblue;
+  /* display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+}
+
+#mainbox {
+  text-align: center;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 5%;
+}
+
+#imagebox {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: cadetblue;
+  background-image: url(../../resources/logo_naver.jpeg);
+  background-position: center center;
+  background-size: 110%;
+}
+
+#title {
+  text-align: center;
+  position: relative;
+  margin: auto;
+  top: 130px;
+  font-weight: bolder;
+}
+
+#github {
+  position: absolute;
+  top: 170px;
+  left: 15px;
+  width: 170px;
+  height: 50px;
+  border: 1px solid white;
+  color: white;
+}
+
+#githublogo {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url(/rlagusghvv.github.io/resources/portfoilo/logo/github_logo.png);
+  background-position: center center;
+  background-size: 100%;
+  text-decoration: none;
+}
+
+#instagram {
+  position: absolute;
+  left: 15px;
+  top: 230px;
+  width: 170px;
+  height: 50px;
+  border: 1px solid white;
+  color: white;
+}
+
+#instagramlogo {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url(/rlagusghvv.github.io/resources/portfoilo/logo/Instagram_logo.png);
+  background-position: center center;
+  background-size: 100%;
+}
+
+.text-decoration {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.action:hover {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+#textlorem {
+  margin-top: 20px;
+  color: white;
+}

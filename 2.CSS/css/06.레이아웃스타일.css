@@ -105,3 +105,107 @@
   /* 블록과 인라인의 특징을 모두 가지게 됨 */
   display: inline-block;
 }
+
+.float {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  border-style: dashed;
+  float: right;
+}
+
+/* 
+position : static (기본값), relative, absolute, fixed
+
+- static : 
+- relative : 현재 위치에서 배치
+- absolute : 부모 위치에서 배치
+- fixed : 원하는 위치에 고정하여 배치
+*/
+#outer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: aquamarine;
+}
+
+#first {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+}
+
+#second {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+#fixed {
+  /* 전체 브라우저 기준으로 위치 설정
+    - 페이지 스크롤 되어도 고정
+    */
+  position: fixed;
+  top: 10px;
+  left: 10px;
+
+  width: 100px;
+  height: 100px;
+  background-color: deeppink;
+}
+
+.visibility {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+}
+
+#vis1 {
+  /* visibility:hidden : 영역은 그대로 둠*/
+  visibility: hidden;
+  /* display: none : 영역도 함께 사라짐*/
+  display: none;
+  background-color: blueviolet;
+}
+
+#vis2 {
+  background-color: chartreuse;
+}
+
+#z-outer {
+  position: relative;
+  height: 250px;
+  border: 1px solid;
+}
+
+.z-index {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+  position: absolute;
+}
+
+#z-index1 {
+  background-color: chartreuse;
+  top: 100px;
+  left: 100px;
+  z-index: 999;
+}
+
+#z-index2 {
+  background-color: blueviolet;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+}
+
+#z-index3 {
+  background-color: gray;
+  z-index: 0.9;
+}
