@@ -1,0 +1,31 @@
+/* 2. flex-wrap */
+/* 4. justify-content */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; /* 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 (필요 시) */
+  height: 100vh; /* 전체 화면 높이 (데모용) */
+  background-color: lightgrey;
+  /* 5. align-items */
+  align-items: flex-end;
+  align-items: center;
+  align-items: stretch;
+
+  /* 6. align-content */
+  flex-wrap: wrap; /* 줄바꿈 허용 */
+  align-content: space-between;
+
+  flex-wrap: nowrap;
+}
+.flex-item {
+  flex-basis: 0;
+  padding: 20px;
+  background-color: coral;
+  margin: 10px;
+}
+
+/*.flex-item img {
+  width: 200px;
+  height: auto;
+}*/

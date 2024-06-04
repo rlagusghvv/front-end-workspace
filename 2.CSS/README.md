@@ -110,3 +110,79 @@ rgba(Red(0~255),Green(0~255),Blue(0~255),alpha<투명도>(0~1));
 - 색상(hue)은 색상환으로 표시 (0~360, 360-빨간색, 120-초록색, 240-파란색)
 - 채도(saturation)는 %로 표시 (0%는 회색톤, 100%는 순색)
 - 밝기(brightness)는 %로 표시 (0%가 가장 어둡고, 100%는 가장 밝다)
+
+justify-content: flex-start / flex-end / center / space-between / space-around / space-evenly;
+
+- flex-start : 기본값. 아이템들을 시작점으로 정렬
+- flex-end : 아이템들을 끝점으로 정렬
+- center : 아이템들을 가운데로 정렬
+- space-between : 아이템들 사이에 균일한 간격으로 정렬
+- space-evenly : 아이템들의 사이와 양 끝에 균일한 간격으로 정렬
+
+## align-items
+
+- 수직축 방향으로 정렬
+
+'''css
+.container {
+align-times : stretch / flex-start / flex-end / center / baseline;
+}
+'''
+
+- stretch : 기본값. 아이템들을 끝까지 늘림
+- flex-start : 아이템들을 위쪽으로 정렬
+- flex-end : 아이템들을 아래쪽으로 정렬
+- center : 아이템들을 가운데 정렬
+- baseline : 아이템들을 텍스트 베이스라인 기준으로 정렬
+
+## align-content
+
+- 여러 행 정렬
+- flex-wrap: wrap; 이 설정된 상태에서, 아이템들의 행이 2줄 이상인 경우 수직축 방향 정렬을 결정하는 속성
+
+'''css
+.container {
+alighn-content : stretch / flex-start / flex-end / center / space-between / space-around / space-evenly;
+}
+'''
+
+## flex-basis
+
+- flex 아이템의 기본 크기 설정 (flex-direction이 row일 때는 너비, column일 떄는 높이)
+
+'''css
+.item {
+flex-basis: auto(기본값) / 0 / 크기;
+}
+'''
+
+## flex-grow
+
+- flex-basis의 값보다 커질 수 있는지를 결정하는 속성
+
+'''css
+.item {
+flex-grow: 0(기본값) / 숫자;
+}
+'''
+
+## flex-shrink
+
+- flex-grow와 쌍을 이루는 속성
+- flex-basis의 값보다 작아질 수 있는지를 결절하는 속성
+
+'''css
+.item {
+flex-shrink: 0(기본값) / 숫자;
+}
+'''
+
+## flex
+
+- flex-grow, flex-shrink, flex-basis를 한번에 쓸 수 있는 속성
+
+'''css
+.item{
+flex: 1 1 auto;
+/_ flex-grow : 1; flex-shrink: 1; flex-basis: auto; _/
+}
