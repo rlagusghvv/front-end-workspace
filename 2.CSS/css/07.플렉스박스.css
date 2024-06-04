@@ -19,10 +19,19 @@
   flex-wrap: nowrap;
 }
 .flex-item {
-  flex-basis: 0;
+  flex-basis: 200px;
   padding: 20px;
   background-color: coral;
   margin: 10px;
+  flex-basis: 200px;
+}
+
+.flex-item:nth-child(1) {
+}
+
+.flex-item img {
+  width: auto;
+  height: auto;
 }
 
 /*.flex-item img {

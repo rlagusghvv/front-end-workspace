@@ -185,4 +185,11 @@ flex-shrink: 0(기본값) / 숫자;
 .item{
 flex: 1 1 auto;
 /_ flex-grow : 1; flex-shrink: 1; flex-basis: auto; _/
+
+flex: 1 500px;
+/_ flex-grow : 1; flex-shrink: 1; flex-basis: 500px; _/
+
+flex: 1;
+/_ flex-grow : 1; flex-shrink: 1; flex-basis: 0%; _/
 }
+'''
