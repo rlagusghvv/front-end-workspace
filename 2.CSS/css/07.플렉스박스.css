@@ -15,23 +15,21 @@
   /* 6. align-content */
   flex-wrap: wrap; /* 줄바꿈 허용 */
   align-content: space-between;
-
   flex-wrap: nowrap;
 }
 .flex-item {
-  flex-basis: 200px;
   padding: 20px;
   background-color: coral;
   margin: 10px;
-  flex-basis: 200px;
+  flex: 1;
 }
 
 .flex-item:nth-child(1) {
+  flex-grow: 1;
 }
 
-.flex-item img {
-  width: auto;
-  height: auto;
+.flex-item:nth-child(2) {
+  flex-grow: 2;
 }
 
 /*.flex-item img {
