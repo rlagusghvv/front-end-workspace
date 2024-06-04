@@ -1,38 +1,56 @@
-/* 2. flex-wrap */
-/* 4. justify-content */
-.flex-container {
+.container {
+  background: lightgray;
+  height: 100vh;
+
+  /* 1. flex */
   display: flex;
+
+  /* 2. flex-direction */
+  flex-direction: column;
   flex-direction: row;
-  justify-content: flex-start; /* 중앙 정렬 */
-  align-items: center; /* 수직 중앙 정렬 (필요 시) */
-  height: 100vh; /* 전체 화면 높이 (데모용) */
-  background-color: lightgrey;
+
+  /* 3. flex-wrap */
+  flex-wrap: wrap-reverse;
+  flex-wrap: nowrap;
+
+  /* 4. justify-content */
+  justify-content: center;
+  justify-content: space-evenly;
+  justify-content: flex-start;
+
   /* 5. align-items */
   align-items: flex-end;
   align-items: center;
   align-items: stretch;
 
   /* 6. align-content */
-  flex-wrap: wrap; /* 줄바꿈 허용 */
-  align-content: space-between;
-  flex-wrap: nowrap;
+  align-content: space-around;
 }
-.flex-item {
-  padding: 20px;
-  background-color: coral;
-  margin: 10px;
+.item {
+  background-color: white;
+  border: 3px solid black;
+  padding: 1rem;
+  flex-basis: auto;
   flex: 1;
 }
-
-.flex-item:nth-child(1) {
-  flex-grow: 1;
+.item:nth-child(1) {
+  /* flex-grow: 1; */
+  align-self: flex-start;
 }
-
-.flex-item:nth-child(2) {
-  flex-grow: 2;
+.item:nth-child(2) {
+  /* flex-grow: 2; */
+  align-self: center;
 }
-
-/*.flex-item img {
-  width: 200px;
-  height: auto;
-}*/
+.item:nth-child(3) {
+  /* flex-grow: 1; */
+  align-self: flex-end;
+  order: 1;
+}
+.item:nth-child(4) {
+  /* flex-grow: 3; */
+  order: 2;
+}
+.item img {
+  width: 95px;
+  height: 95px;
+}
