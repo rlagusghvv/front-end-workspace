@@ -1,0 +1,155 @@
+.box-container {
+  height: 50vh;
+  border: 1px solid;
+}
+
+#box-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition : 시간 변환속성 */
+  transition: 1s linear;
+  /* linear : 일정하게  */
+}
+
+.box:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: white;
+  color: black;
+
+  /* transform : 변형함수() */
+  /* scale : 지정한 크기만큼 확대/축소하는 함수  */
+  transform: scale(1.5);
+  transform: scale(0.5);
+
+  /* rotate : 지정한 각도만큼 회전시키는 함수 */
+  /* deg : 도! */
+  transform: rotate(90deg);
+  /* skew : 지정한 각도만큼 비틀어 왜곡하는 함수  */
+  transform: skew(90deg);
+  transform: skewY(-30deg);
+
+  /* translate : x,y,z 축 방향으로 이동시키는 함수 */
+  transform: translateX(100px);
+  transform: translate(100px, 200px);
+  transform: translateZ(60px);
+  transform: scale(1.5) rotate(15deg);
+}
+/* animation */
+
+#box-container2 {
+  width: 1200px;
+  height: 600px;
+}
+
+.animation-box {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  background-color: indigo;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* animation : name duration iteration-count timing-function delay direction
+  
+  - name : 설정된 keyframe 지정
+  - duration : 실행 시간 지정
+  - iteration-count : 반복 횟수 지정
+  - timing-function : 속도 형태 지정
+  - delay : 대기 시간 지정
+  - direction : 진행 형태 지정
+  {
+  */
+  animation: boxAni 5s linear infinite reverse;
+  animation: boxAni 5s linear forwards;
+  animation: boxAni 5s linear infinite alternate;
+}
+.animation-box:hover {
+  background-color: black;
+  animation-play-state: paused;
+}
+/* 
+    @keyframes 애니메이션 이름 {
+        from { 시작 프레임 설정 }
+        to { 끝 프레임 설정 }
+        % { 단위로 지정 가능}
+    }
+  */
+
+@keyframes boxAni {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(1000px, 0);
+  }
+  50% {
+    transform: translate(1000px, 400px);
+  }
+  75% {
+    transform: translate(0px, 400px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+/* ------------------------------------------------------------ */
+/* 3D */
+
+#box-container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box-container3:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform: rotateY(0deg);
+  transition: 3s linear;
+}
+
+.card-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card-item-front {
+  background-image: url(/resources/css/짱구1.jpg);
+  background-size: 200px 200px;
+  background-position: center;
+  z-index: 1;
+}
+
+.card-item-back {
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+}

@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url(/resources/css/실습문제3/background.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  font-size: 5rem;
+  margin-top: 30px;
+  padding: 5px;
+  border-bottom: 2px solid white;
+}
+.header nav {
+  margin-bottom: 50px;
+}
+.header nav a {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  display: block;
+  margin-bottom: 15px;
+  border-bottom: 5px solid white;
+  border-style: dotted;
+}
+
+.header nav a:hover {
+  color: black;
+}
+.content {
+  padding-left: 300px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  background-color: gray;
+}
+
+.content h1 {
+  line-height: 90px;
+  height: 100px;
+  width: auto;
+  background-color: rgba(0, 0, 0, 60%);
+  font-size: 3rem;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 50px;
+}
+
+.content img {
+  width: 100%;
+  /* max-width: ; : 해당 하는 요소의 최대 크기를 설정(한계를 설정) */
+  max-width: 500px;
+  align-self: center;
+  margin-bottom: 50px;
+}
+
+.content p {
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: bold;
+  text-indent: 15px;
+}
