@@ -1,0 +1,43 @@
+.container {
+  background: linear-gradient(45deg, black, blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  background-color: white;
+  height: 40px;
+  width: 6px;
+  margin: 3px;
+  border-radius: 50px;
+  border: 1px solid white;
+}
+
+@keyframes boxAni {
+  from {
+    transform: scale(80%);
+  }
+  to {
+    transform: scaleY(150%);
+  }
+}
+
+.square {
+  animation: boxAni 1s infinite alternate;
+}
+
+.square:nth-child(2),
+.square:nth-child(6) {
+  animation-delay: 0.2s;
+}
+
+.square:nth-child(3),
+.square:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.square:nth-child(4) {
+  animation-delay: 0.4s;
+}

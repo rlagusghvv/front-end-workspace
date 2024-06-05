@@ -127,7 +127,8 @@
   height: 200px;
   position: relative;
   transform: rotateY(0deg);
-  transition: 3s linear;
+  transition: 3s;
+  transform-style: preserve-3d;
 }
 
 .card-item {
@@ -142,6 +143,7 @@
   background-size: 200px 200px;
   background-position: center;
   z-index: 1;
+  backface-visibility: hidden;
 }
 
 .card-item-back {
@@ -152,4 +154,5 @@
   font-weight: bold;
   font-size: 2rem;
   color: white;
+  transform: rotateY(-180deg);
 }
