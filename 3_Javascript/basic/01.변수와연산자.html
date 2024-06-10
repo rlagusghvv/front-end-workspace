@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수와연산자</title>
+    <!-- <script>
+      // document: 객체 / write: 함수
+      console.log(222);
+      alert(333);
+    </script> -->
+    <script src="/3_Javascript/basic/script.js"></script>
+  </head>
+  <body>
+    <h1>변수</h1>
+    <p>어떠한 값을 저장하는 공간</p>
+    <!-- var, const, let -->
+    <script>
+      // 옛날 방식 - 거의 사용 안함
+      //   = : 같다가 아닌 왼쪽에 오른쪽 값이 들어간다
+      //   var 변수명 = 값;
+      var varA = 100;
+      console.log(varA); // 100
+      //   문자를 넣고 싶을 땐 ''/"" 사용
+      varA = "ZZZ";
+      console.log(varA); // ZZZ
+
+      // const : 상수 값을 담음!! 값 수정 불가! but 자주!! 사용됨
+      //   값의 임의적인 변경을 막기 위해 주로 상수 const를 사용함
+      const constB = 200; // const 변수명 = 값;
+      console.log(constB); // 200
+      //   constB = "XXX"; // Uncaught TyepError
+
+      //   let : 변수 - 값을 수정할 수 있다! (가끔 사용됨)
+      let letC = 300; // let 변수명 = 값;
+      console.log(letC);
+      lecC = "xxx";
+      console.log(lecC);
+
+      //   typeof : 데이터 타입 확인
+    </script>
+  </body>
+</html>

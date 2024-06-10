@@ -1,0 +1,45 @@
+body {
+  background: linear-gradient(45deg, black, blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+.square {
+  width: 5px;
+  height: 50px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 50px;
+  animation: movAni 1s linear infinite alternate;
+}
+
+@keyframes movAni {
+  0% {
+    transform: scaleY(100%);
+  }
+  50% {
+    transform: scaleY(180%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
+
+.square:nth-child(2),
+.square:nth-child(6) {
+  animation-delay: 0.1s;
+}
+
+.square:nth-child(3),
+.square:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+.square:nth-child(4) {
+  animation-delay: 0.3s;
+}
