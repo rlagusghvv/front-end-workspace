@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <h1>함수</h1>
+
+    <!-- 선언적 함수 -->
+    <script>
+      // function 함수명(매개변수) { return 결과값; }
+      // 함수명 : camelCase(낙타표기법)
+
+      function sample() {
+        console.log("Hello~~");
+      }
+      sample();
+
+      // 두 수를 더하는 기능을 가진 선언적 함수
+      function plus(a, b) {
+        console.log("a : " + a + " , b : " + b);
+        return a + b;
+      }
+      plus(1, 2); // 3
+      const result = plus(1, 2);
+      console.log(plus(1, 2));
+      console.log(result);
+      plus(10, 20); // 30
+      const result2 = plus(100, 200);
+      console.log(result2); // 300
+    </script>
+
+    <!-- 변수의 유효범위(scope) 
+     -> 바깥에 있는 변수는 안에서 사용 가능!
+     but 안쪽에 있는 변수는 해당 영역 내에서만 사용 가능
+    -->
+    <script>
+      const num1 = 100;
+
+      // 호이스팅 : 함수, 클래스 등을 맨 위로 끌어올리는 것처럼 보이는 현상
+      sample2(); // 200
+
+      function sample2() {
+        const num1 = 200;
+        console.log("sample2 내부 : " + num1); // 200
+
+        function sample3() {
+          const num2 = 300;
+        }
+      }
+      console.log("sample2 외부 : " + num1); // 100
+      // console.log("num2 : " + num2); 오류!
+    </script>
+
+    <!-- 익명 함수 -->
+    <!-- const 함수명 = function (매개변수) { return 결과값; } -->
+    <script>
+      const minus = function (a, b) {
+        return a - b;
+      };
+      console.log(minus(70, 30)); // 40
+    </script>
+
+    <!-- 화살표 함수 -->
+    <script>
+      const multiply = (a, b) => {
+        return a * b;
+      };
+      console.log(multiply(3, 7)); // 21
+    </script>
+
+    <!-- 배열.함수(콜백함수) -->
+    <script>
+      const arr = [1, 2, 3, 4, 5, 6, 7];
+      // forEach : 값을 하나씩 가져올 수 있다.
+      // 배열.forEach ((값, 인덱스, 배열) => {});
+      arr.forEach((value, index, array) => {
+        console.log(
+          "value : " + value + ", index : " + index + ", array : " + array
+        );
+      });
+
+      // map : 리턴한 값들을 기반으로 새로운 배열을 만든다.
+      // 배열.map((값, 인덱스, 배열) => {});
+      const arr2 = arr.map(function (value) {
+        return value * 2;
+      });
+      console.log(arr2);
+
+      // filter : 리턴한 값들이 true인 것들만 모아서 새로운 배열을 만든다.
+      // 배열.filter((값, 인덱스, 배열) => {});
+      const arr3 = arr.filter((value) => {
+        return value % 2 === 0;
+      });
+      console.log(arr3);
+
+      // reduce : 하나의 결과값을 반환한다.
+      // 배열.reduce((누적된 값, 값, 인덱스, 배열) => {}, 초기값);
+
+      const result3 = arr.reduce(function (acc, value) {
+        return acc + value;
+      }, 2);
+      console.log(result3);
+
+      function showThis() {
+        console.log(this);
+      }
+      showThis(); // 전역 객체, 브라우저에서는 window를 가리켜
+    </script>
+  </body>
+</html>

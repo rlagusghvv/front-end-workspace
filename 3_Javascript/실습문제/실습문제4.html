@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제4</title>
+  </head>
+  <body>
+    <!-- Q1. 100 ~ 200 정수 중 5의 배수가 아닌 수를 출력하세요 -->
+    <script>
+      for (let i = 100; i < 201; i++) {
+        if (i % 5 !== 0) {
+          console.log(i);
+        }
+      }
+    </script>
+
+    <!-- Q2. 1 ~ 1000 정수 중 3의 배수의 합계를 출력하세요 -->
+    <script>
+      console.log("-- Q2. 1 ~ 1000 정수 중 3의 배수의 합계를 출력하세요 --");
+      let j = 0;
+      for (let i = 1; i <= 1000; i++) {
+        if (i % 3 === 0) {
+          j = j + i;
+        }
+      }
+      console.log(j);
+    </script>
+
+    <!-- Q3. 문자열의 문자들을 하나씩 출력하세요 -->
+    <script>
+      const str = "안녕하세요. 반갑습니다!";
+      console.log("-- Q3. 문자열의 문자들을 하나씩 출력하세요 --");
+      for (let i = 0; i < str.length; i++) {
+        console.log(str[i]);
+      }
+    </script>
+
+    <!-- Q4. 배열 값 중 최대값을 출력하세요 -->
+    <script>
+      const nums = [3, 7, 12, 5, 3];
+      let maxnum = nums[0];
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > maxnum) {
+          maxnum = nums[i];
+        }
+      }
+      console.log(maxnum);
+    </script>
+
+    <!-- Q5. 1 ~ 10 정수 중 소수(1과 자기자신)를 출력하세요
+              2, 3, 5, 7
+    -->
+    <script>
+      for (let i = 1; i <= 10; i++) {
+        for (let j = 1; j < 10; j++) {
+          if (i !== j && i / j === 0)
+        }
+      }
+    </script>
+
+    <!-- Q6. 배열 안의 데이터를 모두 2배로 만들어서 출력하세요 -->
+    <script>
+      const nums2 = [1, 3, 5];
+    </script>
+
+    <!-- Q7. 배열에 있는 데이터들로 합계와 평균을 출력하세요 -->
+    <script>
+      const nums3 = [90, 85, 70, 86, 97];
+    </script>
+
+    <!-- Q8. 두 배열의 각 데이터의 곱셈을 한 데이터들로 이루어진 새로운 배열을 생성하여 출력하세요 -->
+    <script>
+      const a1 = [12, 0, 2, 5, 4];
+      const b1 = [5, 15, 6, 7, 8];
+    </script>
+
+    <!-- Q9. 두 배열의 데이터 값이 서로 같은 데이터들만 이루어진 새로운 배열을 생성하여 출력하세요
+            배열.includes(데이터) : 해당 데이터가 배열에 있으면 true, 없으면 false
+    -->
+    <script>
+      const a2 = [12, 0, 2, 5, 4];
+      const b2 = [0, 2, 3, 12, 8];
+      const c2 = [];
+    </script>
+
+    <!-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 -->
+    <script>
+      const scores = [
+        [83, 90, 70, 87],
+        [87, 93, 62, 83],
+        [98, 90, 77, 97],
+      ];
+    </script>
+  </body>
+</html>

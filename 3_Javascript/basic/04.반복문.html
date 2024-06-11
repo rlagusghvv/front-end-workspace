@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <h1>반복문</h1>
+
+    <!-- 
+        for(초기값; 조건식; 증감식) {
+
+        } 
+    -->
+
+    <script>
+      // 1~10까지 출력하세요
+      // 전위연산자(++n, --n)와 후위연산자(n++, n--)
+      // ++n, n++ : n = n + 1
+      // --n, n-- : n = n - 1
+      // 전위는 계산하고 출력, 후위는 출력하고 계산
+      let num = 2;
+      console.log(num++); // 2
+      console.log(num); // 3
+      console.log(--num); // 2
+      console.log(num);
+
+      console.log("-----------------------");
+      for (let i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+      console.log("-----------------------");
+
+      // 복합대입연산자
+      num = 2;
+      num += 3; // num = num + 3;
+      console.log(num);
+    </script>
+    <!-- 배열과 반복문 -->
+    <script>
+      const movies = ["원더랜드", "퓨리오사", "그녀가 죽었다", "범죄도시4"];
+      // 영화 제목을 하나씩 출력
+      console.log(movies[0]);
+      console.log(movies[1]);
+      console.log(movies[2]);
+      // for 문 사용!
+      // for 안의 변수명은 해당 for문 내에서만 사용하는 변수명!
+      for (
+        let i = 0;
+        i < movies.length;
+        i++ // length를 사용한다면 일일히 인덱스를 변경해줄 필요가 없음
+      ) {
+        console.log(movies[i]);
+      }
+    </script>
+
+    <!-- for in - 향상된 for문 -->
+    <!-- for(const 인덱스 in 배열) {} -->
+    <script>
+      console.log("--------------------------");
+
+      for (const index in movies) {
+        console.log(movies[index]);
+      }
+    </script>
+
+    <!-- for of : for(const 값 of 배열) {}  -->
+    <script>
+      console.log("--------------------------");
+      for (const value of movies) {
+        console.log(value);
+      }
+    </script>
+
+    <!-- while 문 -->
+    <!-- while(조건) {
+        조건이 true면 계속
+    } 
+     => 대부분 for문을 사용하고 무한루프를 만드는 경우에만 while 사용 (자바에서 확인)
+    -->
+
+    <script>
+      console.log("--------------------------");
+      let i = 0;
+      while (i < movies.length) {
+        console.log(movies[i]);
+        i++;
+      }
+    </script>
+
+    <!-- break 와 continue -->
+    <script>
+      console.log("--------------------------");
+      // 1 ~ 8까지 홀수만 출력
+      for (let number = 1; number <= 10; number++) {
+        if (number === 8) {
+          break; // 반복문을 빠져나감
+        }
+        if (number % 2 === 0) {
+          continue; // 반복문 빠져나가지 X, 건너뛰는 것 뿐!
+        }
+        console.log(number);
+      }
+    </script>
+
+    <!-- 2차원 배열 + 중첩 for 문 -->
+    <script>
+      console.log("--------------------------");
+      const arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      // arr[0]
+      console.log(arr[0]); // [1, 2, 3]
+      console.log(arr[0][0]); // 1
+      console.log(arr[0][1]); // 2
+      console.log(arr[0][2]); // 3
+
+      // arr[1]
+      console.log(arr[1][0]); // 4
+      console.log(arr[1][1]); // 5
+      console.log(arr[1][2]); // 6
+
+      // arr[2]
+      console.log(arr[2][0]); // 7
+      console.log(arr[2][1]); // 8
+      console.log(arr[2][2]); // 9
+
+      // 1 ~ 9까지 순서대로 출력! (i, j, k, ...)
+      console.log("---------------------------");
+      for (let i = 0; i < arr.length; i++) {
+        for (
+          let j = 0;
+          j < arr[i].length; // 배열 내 개별 배열의 길이
+          j++
+        ) {
+          console.log(arr[i][j]);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -59,5 +59,44 @@
         console.log("유아");
       }
     </script>
+
+    <!-- switch(데이터){ 
+      case 조건 A(값) : A
+       조건 A가 true 
+       break;
+       case 조건 B(값) : B
+       조건 B가 true
+       default :
+       모든 조건이 false
+      } -->
+
+    <script>
+      // prompt alert처럼 창이 뜨고 입력 창도 함께 뜸!
+      const number = prompt("숫자를 입력하세요");
+      console.log("76번째 줄 >> " + number);
+
+      // number 값이 짝수이면 짝수, 홀수이면 홀수 출력!
+      // 그 외에는 숫자가 아닙니다 라고 출력!
+
+      // if 문
+      if (number % 2 === 0) {
+        console.log("짝수입니다.");
+      } else if (number % 2 === 1) {
+        console.log("홀수입니다.");
+      } else {
+        console.log("숫자가 아닙니다.");
+      }
+      // switch
+      switch (number % 2) {
+        case 0:
+          console.log("짝수입니다.");
+          break; // break : 중괄호에서 나가게하는 역할
+        case 1:
+          console.log("홀수입니다.");
+          break;
+        default:
+          console.log("숫자가 아닙니다.");
+      }
+    </script>
   </body>
 </html>
