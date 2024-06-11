@@ -34,10 +34,119 @@
       //   let : 변수 - 값을 수정할 수 있다! (가끔 사용됨)
       let letC = 300; // let 변수명 = 값;
       console.log(letC);
-      lecC = "xxx";
-      console.log(lecC);
+      letC = "xxx";
+      console.log(letC);
 
       //   typeof : 데이터 타입 확인
+      console.log(typeof constB); //number
+      console.log(typeof letC); //string
+    </script>
+
+    <!-- 기본 데이터 타입 -->
+    <!-- 문자열(string)  -->
+    <script>
+      //script는 태그가 구분되어도 하나의 html 파일 내에서는 통합되어 사용됨
+
+      let message = '"안녕"이라고 말해보세요~';
+      // "" 내에 ""를 넣고 싶은 경우 ex"\"안녕\"이라고 말해보세요~"
+      message = '"안녕"이라고 말해보세요~';
+      console.log(message);
+      console.log(message[0]);
+      console.log(message[8]); // 말
+      console.log(message.length); // 14 - 글자수
+
+      console.log("누군가에게", message); // 누군가에게 "안녕"이라고 말해보세요~
+      console.log("그 사람에게" + message); // 그 사람에게"안녕"이라고 말해보세요~ (,와 +의 차이점 + 뒤의 공백이 반영되지 않음 - 공백을 주고 싶은ㄱ 경우 "" 내에 공백을 주는 것이 좋음)
+      // - 자바는 ,가 없어서 +를 사용하는 것이 좋음
+      console.log(`누군가에게 ${message}`);
+      // `text ${변수명}` / ` = tap키 위 달러표시를 영문 키보드로 입력하면 됨
+
+      const name = "서동문";
+      const age = 3;
+      // 안녕? 내 이름은 서동문이고, 나이는 3살!
+      console.log("안녕? 내 이름은", name, "이고, 나이는", age, "살!");
+      console.log("안녕? 내 이름은 " + name + "이고, 나이는 " + age + "살!");
+      console.log(`안녕? 내 이름은 ${name}이고, 나이는 ${age}살!`);
+    </script>
+
+    <!-- 숫자 -->
+    <script>
+      const num1 = 10;
+      const num2 = 3;
+      console.log(num1 + num2); // 13
+      console.log(num1 - num2); // 7
+      console.log(num1 * num2); // 30
+      console.log(num1 / num2); // 3.3333....
+      console.log(num1 % num2); // 1 / 최대한으로 나누고 남은 값
+      console.log(num1 ** num2); // 1000 / 제곱! 10^3 = 1000
+
+      // 문자열 -> 숫자 : Number()
+      console.log(typeof "100"); // string
+      console.log(typeof Number("100"));
+      console.log(Number("Hello")); // NaN (Not a Number)
+
+      // 숫자 -> 문자열 : String()
+      console.log(typeof 100); // number
+      console.log(typeof String(100)); // string
+
+      // 실수 -> 정수 (소수점 제외) : parseInt()
+      console.log(parseInt(1.2345)); // 1
+    </script>
+    <script>
+      // undefined, null
+      let test;
+      console.log(test); // undefined - 정의되지 않음
+
+      test = null;
+      console.log(test); // null - 아무것도 없음
+    </script>
+
+    <!-- Bollean(true, false)과 비교 연산자 -->
+    <script>
+      console.log(true);
+      console.log(false);
+      let num3 = 100;
+      let num4 = 200;
+      console.log(num3 < num4); // true
+      console.log(num3 >= num4); // false
+
+      num4 = 100;
+      num4 = "100";
+      // ! = 뒷쪽 기호 하지 않다
+      // ==, != 문자, 숫자 등 데이터 타입 상관없이 판단
+      console.log(num3 == num4); // true
+      console.log(num3 != num4); // false
+
+      // ===, !== 데이터 타입까지 체크하여 진위여부 판단
+      console.log(num3 === num4); // true
+      console.log(num3 !== num4); // false
+
+      // 다른 데이터 타입 -> Boolean : Boolean()
+      // false : 0, NaN, "", null, undefined
+      // 나머지는 모두 true
+      console.log(Boolean(0));
+      console.log(Boolean(NaN));
+      console.log(Boolean("apple"));
+      console.log(Boolean(1));
+    </script>
+
+    <!-- 논리 연산자 -->
+    <script>
+      const a = 100;
+      const b = 200;
+
+      // && : 그리고(and) - 하나라도 false면 false! / 둘다 true인 경우만 true!
+      console.log(a < 200 && a == 100); // true && true = true
+      console.log(a > 200 && a == 100); // false && true = false
+
+      // || : 또는(or) - 하나라도 true면 true!
+      console.log(a > 200 || a == 100); // false || true = true
+      console.log(a > 200 || a != 100); // false || false = false
+
+      // ! : 아니다(not)
+      console.log(!true); // false
+      console.log(!false); // true
+      console.log(!!(a > b)); // false
     </script>
   </body>
 </html>

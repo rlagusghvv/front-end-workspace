@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제1</title>
+  </head>
+  <body>
+    <!-- 
+      변수 명명 규칙
+      1) 변수명에는 문자, 숫자, 기호는 $, _만 사용 
+      2) 첫글자에는 숫자 금지
+      3) 예약어(const, if, switch, ...) 금지
+      4) 표기법대로 사용 - camelCase(낙타표기법)
+      5) 상수(const로 표시한 것 X)는 대문자 + snake_case(언더바 표기법)
+    -->
+
+    <!-- 
+        Q1. 킬로그램(kg)을 파운드(lb)로 환산하여 console에 출력하시오.
+           - 파운드 = 킬로그램 * 2.2
+           예) 킬로그램 : 60  
+     -->
+    <script>
+      const kg = 60;
+      const lb = kg * 2.2 + " lb";
+      console.log(kg * 2.2 + " lb");
+    </script>
+
+    <!--
+        Q2. 제곱미터를 평으로 환산하여 console에 출력하시오.
+           - 평 = 제곱미터 * 0.3
+           예) 제곱미터 : 99
+    -->
+    <script>
+      const square_meter = 99;
+      console.log(square_meter * 0.3 + "평");
+    </script>
+
+    <!-- 
+        Q3. 사다리꼴의 넓이를 구하여 console에 출력하시오.
+           - 사다리꼴의 넓이 = (윗변 길이 + 밑변 길이) / 2 * 높이
+           예) 윗변 : 10, 밑변 : 14, 높이 : 4
+     -->
+    <script>
+      const upper_side = 10;
+      const base = 14;
+      const height = 4;
+      console.log(
+        "사다리꼴의 넓이는 ? : " + ((upper_side * base) / 2) * height
+      );
+    </script>
+
+    <!-- 
+        Q4. 정기예금을 은행에 예치했을 때 수령하는 월 이자를 계산하여 console에 출력하시오. 단, 년 이율은 4%로 가정한다. 
+           - 월 이자 = 정기 예금액 * 0.04 / 12
+           - 예) 정기 예금액 : 12,000,000
+    -->
+    <script>
+      const account = 12000000;
+      console.log(
+        "예금액 " + account + "원의 월 이자는 ? " + (account * 0.04) / 12 + "원"
+      );
+    </script>
+
+    <!-- 
+        Q5. 머쓱이는 55살인 선생님이 몇 년도에 태어났는지 궁금해졌다. 나이 age가 주어질 때, 2024년을 기준 출생 연도를 console에 출력하시오.
+     -->
+    <script>
+      const age = 55;
+      console.log(2024 - age + 1 + "년생");
+    </script>
+
+    <!-- 
+        Q6. 머쓱이는 추운 날에도 아이스 아메리카노만 마신다. 아이스 아메리카노는 한잔에 5,500원이다. 
+            머쓱이가 가지고 있는 돈이 15,000원 일 때, 머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 console에 출력하시오.
+     -->
+    <script>
+      const americano = 5500;
+      const money = 15000;
+
+      console.log(
+        parseInt(money / americano) + "잔 / " + (money % americano) + "원"
+      );
+    </script>
+
+    <!-- 
+      Q7. 머쓱이네 양꼬치 가게는 10인분을 먹으면 음료수 하나를 서비스로 준다. 양꼬치는 1인분에 12,000원, 음료수는 2,000원이다. 
+          양꼬치 64인분과 음료수 6개를 먹었다면 총얼마를 지불해야 하는지 console에 출력하시오.
+     -->
+    <script>
+      const ea = 64;
+      const cost = 12000;
+      console.log(ea * cost + "원");
+    </script>
+
+    <h1
+      style="display: flex"
+      style="align-items: center"
+      style="margin: none"
+      style="padding: none"
+    >
+      1번<button type="button" class="button1" style="height: 40px">
+        정답
+      </button>
+    </h1>
+    <h1>2번</h1>
+    <h1>3번</h1>
+    <h1>4번</h1>
+    <h1>5번</h1>
+    <h1>6번</h1>
+    <h1>7번</h1>
+
+    <script>
+      document.querySelector(".button1").addEventListener("click", function () {
+        alert(lb);
+      });
+    </script>
+  </body>
+</html>
