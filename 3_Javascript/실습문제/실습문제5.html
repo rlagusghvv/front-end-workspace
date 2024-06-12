@@ -56,7 +56,7 @@
 
     <script>
       function printValue() {
-
+        result1.innerHTML = `<br>${customer.value}님의 구매 상품은 ${product.value}, 구매 가격은 ${price.value}원 입니다.`;
       }
     </script>
 
@@ -84,7 +84,7 @@
 
     <script>
       function stringLength() {
-
+        result2.innerHTML = `보기의 문자열 길이는 ${text1.value.length}글자 입니다.`;
       }
     </script>
 
@@ -110,7 +110,17 @@
 
     <script>
       function stringSplit() {
-
+        const text2 = la1.innerHTML.split(",");
+        // for (const index in text2) {
+        //   result3.innerHTML += `${Number(index) + 1}, ${text2[index]} <br>`;
+        // }
+        const ol = document.createElement("ol");
+        for (const value of text2) {
+          const li = document.createElement("li");
+          li.innerHTML = value;
+          ol.appendChild(li);
+        }
+        result3.appendChild(ol);
       }
     </script>
 
@@ -152,7 +162,18 @@
 
     <script>
       function arrayTest() {
-
+        const textbox = preview.innerHTML.split(" ");
+        // const index = preview.indexOf(remove.value); - 배열에서 삭제할 값의 인덱스 찾기
+        // preview.spilce(index,1); - 배열에서 삭제
+        // preview.push(add.value) - 배열 맨 뒤에 음식 이름 추가
+        // result4.innerHTML = textbox.join(" ")
+        for (i = 0; i < textbox.length; i++) {
+          if (remove.value === textbox[i]) {
+            textbox.splice([i], 1);
+            textbox.push(add.value);
+          }
+          result4.innerHTML = textbox;
+        }
       }
     </script>
 
@@ -192,8 +213,43 @@
     </div>
 
     <script>
+      // function Student(name, age, addr) {
+      //   this.name = name;
+      //   this.age = age;
+      //   this.addr = addr;
+      // }
       function addStudent() {
+        // 클래스를 통한 풀이 방법
+        // const arr = [];
+        // // 입력
+        // for (let i = 0; i < 3; i++) {
+        //   const name = prompt(`${i + 1}번째 학생 이름 입력`);
+        //   const age = prompt(`${i + 1}번째 학생 나이 입력`);
+        //   const addr = prompt(`${i + 1}번째 학생 주소 입력`);
+        //   const student = new Student(name, age, addr);
+        //   arr.push(student);
+        // }
+        // //출력
+        // const names = document.querySelectorAll(".name");
+        // const ages = document.querySelectorAll(".age");
+        // const addrs = document.querySelectorAll(".addr");
+        // for (let i = 0; i < 3; i++) {
+        //   names[i].innerHTML = arr[i].name;
+        //   ages[i].innerHTML = arr[i].age;
+        //   addrs[i].innerHTML = arr[i].addr;
+        // }
+        const names = document.querySelectorAll(".name");
+        const ages = document.querySelectorAll(".age");
+        const addrs = document.querySelectorAll(".addr");
 
+        for (let i = 0; i < 3; i++) {
+          const name = prompt(`${i + 1}번째 학생 이름 입력`);
+          const age = prompt(`${i + 1}번째 학생 나이 입력`);
+          const addr = prompt(`${i + 1}번째 학생 주소 입력`);
+          names[i].innerHTML = name;
+          ages[i].innerHTML = age;
+          addrs[i].innerHTML = addr;
+        }
       }
     </script>
   </body>
