@@ -86,15 +86,18 @@
     <script>
       console.log("-- Q7. 배열에 있는 데이터들로 합계와 평균을 출력하세요 --");
       const nums3 = [90, 85, 70, 86, 97];
-      const sum = 0;
-      const num3D = nums3.reduce((acc, value) => {
-        return (sum += value);
-      });
-      const num3A = nums3.reduce((acc, value) => {
-        return sum / nums3.length;
-      });
+      let num3D = 0;
+      for (let i = 0; i < nums3.length; i++) {
+        num3D += nums3[i];
+      }
+      const num3A = num3D / nums3.length;
+
       console.log(
-        "num3의 합계는 : " + num3D + "이고, 평균값은 : " + num3A + "입니다."
+        "배열 내 데이터의 합계는 : " +
+          num3D +
+          "이고, 평균값은 : " +
+          num3A +
+          " 입니다."
       );
     </script>
 
