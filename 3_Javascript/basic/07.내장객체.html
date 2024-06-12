@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내장객체</title>
+    <script src="/3_Javascript/basic/07.내장객체.js"></script>
+  </head>
+  <body>
+    <h1>내장객체</h1>
+    <p>자바스크림트 내에서 제공하는 객체</p>
+
+    <h2>Math 객체</h2>
+    <p>수학적 연산을 위한 다양한 함수 제공</p>
+
+    <h3>min() / max() / abs()</h3>
+    <p>최소값 / 최대값 / 절대값</p>
+
+    <button onclick="btn1()">확인</button>
+
+    <h3>round() / floor() / ceil()</h3>
+    <p>반올림 / 버림 / 올림</p>
+
+    <button onclick="btn2()">확인</button>
+
+    <h3>random()</h3>
+    <p>랜덤값</p>
+
+    <button onclick="btn3()">확인</button>
+
+    <h2>Date 객체</h2>
+    <p>날짜와 시간을 처리하는데 사용</p>
+
+    <h3>현재 날짜와 시간</h3>
+    <button onclick="btn4()">확인</button>
+
+    <h3>특정 날짜로 설정</h3>
+    <button onclick="btn5()">확인</button>
+
+    <h2>Timer</h2>
+    <p>일정 시간이 경과된 이후 특정 작업을 할 수 있도록 제공</p>
+
+    <h3>setTimeout()</h3>
+    <p>매개값으로 전달된 콜백 함수를 단 한번만 실행</p>
+    <button onclick="btn6()">확인</button>
+
+    <h3>setInterval()</h3>
+    <p>매개값으로 전달된 콜백 함수를 반복해서 실행</p>
+    <button onclick="btn7()">확인</button>
+
+    <h2>location 객체</h2>
+    <p>브라우저의 URL과 관련된 객체로 주소와 관련된 정보를 가진 객체</p>
+    <button onclick="btn8()">확인</button>
+
+    <h2>history 객체</h2>
+    <p>브라우저에서 이동한 문서의 내역을 관리하는 객체</p>
+    <button onclick="history.back()">이전페이지로 이동</button>
+    <button onclick="history.go(-1)">이전페이지로 이동</button>
+
+    <button onclick="history.forward()">다음페이지로 이동</button>
+    <button onclick="history.go(+1)">다음페이지로 이동</button>
+  </body>
+</html>

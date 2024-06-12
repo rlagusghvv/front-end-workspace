@@ -8,11 +8,16 @@
   <body>
     <!-- Q1. 100 ~ 200 정수 중 5의 배수가 아닌 수를 출력하세요 -->
     <script>
+      console.log(
+        "-- Q1. 100 ~ 200 정수 중 5의 배수가 아닌 수를 출력하세요 --"
+      );
+      const print = [];
       for (let i = 100; i < 201; i++) {
         if (i % 5 !== 0) {
-          console.log(i);
+          print.push(i);
         }
       }
+      console.log(print);
     </script>
 
     <!-- Q2. 1 ~ 1000 정수 중 3의 배수의 합계를 출력하세요 -->
@@ -30,14 +35,17 @@
     <!-- Q3. 문자열의 문자들을 하나씩 출력하세요 -->
     <script>
       const str = "안녕하세요. 반갑습니다!";
+      const print2 = [];
       console.log("-- Q3. 문자열의 문자들을 하나씩 출력하세요 --");
       for (let i = 0; i < str.length; i++) {
-        console.log(str[i]);
+        print2.push(str[i]);
       }
+      console.log(print2);
     </script>
 
     <!-- Q4. 배열 값 중 최대값을 출력하세요 -->
     <script>
+      console.log("-- Q4. 배열 값 중 최대값을 출력하세요 --");
       const nums = [3, 7, 12, 5, 3];
       let maxnum = nums[0];
       for (let i = 0; i < nums.length; i++) {
@@ -52,45 +60,101 @@
               2, 3, 5, 7
     -->
     <script>
+      console.log("-- Q5. 1 ~ 10 정수 중 소수(1과 자기자신)를 출력하세요--");
+      const print3 = [];
       for (let i = 1; i <= 10; i++) {
-        for (let j = 1; j < 10; j++) {
-          if (i !== j && i / j === 0)
+        if (i === 2 || i === 3 || (i !== 1 && i % 2 !== 0 && i % 3 !== 0)) {
+          print3.push(i);
         }
       }
+      console.log(print3);
     </script>
 
     <!-- Q6. 배열 안의 데이터를 모두 2배로 만들어서 출력하세요 -->
     <script>
+      console.log(
+        "-- Q6. 배열 안의 데이터를 모두 2배로 만들어서 출력하세요 --"
+      );
       const nums2 = [1, 3, 5];
+      const numsD = nums2.map(function (value) {
+        return value * 2;
+      });
+      console.log(numsD);
     </script>
 
     <!-- Q7. 배열에 있는 데이터들로 합계와 평균을 출력하세요 -->
     <script>
+      console.log("-- Q7. 배열에 있는 데이터들로 합계와 평균을 출력하세요 --");
       const nums3 = [90, 85, 70, 86, 97];
+      const sum = 0;
+      const num3D = nums3.reduce((acc, value) => {
+        return (sum += value);
+      });
+      const num3A = nums3.reduce((acc, value) => {
+        return sum / nums3.length;
+      });
+      console.log(
+        "num3의 합계는 : " + num3D + "이고, 평균값은 : " + num3A + "입니다."
+      );
     </script>
 
     <!-- Q8. 두 배열의 각 데이터의 곱셈을 한 데이터들로 이루어진 새로운 배열을 생성하여 출력하세요 -->
     <script>
+      console.log(
+        "-- Q8. 두 배열의 각 데이터의 곱셈을 한 데이터들로 이루어진 새로운 배열을 생성하여 출력하세요 --"
+      );
       const a1 = [12, 0, 2, 5, 4];
       const b1 = [5, 15, 6, 7, 8];
+      const result1 = [];
+
+      for (let i = 0; i <= a1.length - 1; i++) {
+        result1[i] = a1[i] * b1[i];
+      }
+      console.log(result1);
     </script>
 
     <!-- Q9. 두 배열의 데이터 값이 서로 같은 데이터들만 이루어진 새로운 배열을 생성하여 출력하세요
             배열.includes(데이터) : 해당 데이터가 배열에 있으면 true, 없으면 false
     -->
     <script>
+      console.log(
+        "-- Q9. 두 배열의 데이터 값이 서로 같은 데이터들만 이루어진 새로운 배열을 생성하여 출력하세요 / 배열.includes(데이터) : 해당 데이터가 배열에 있으면 true, 없으면 false--"
+      );
       const a2 = [12, 0, 2, 5, 4];
       const b2 = [0, 2, 3, 12, 8];
       const c2 = [];
+      for (let i = 0; i < a2.length - 1; i++) {
+        if (b2.includes(a2[i])) {
+          c2.push(a2[i]);
+        }
+      }
+      console.log(c2);
     </script>
 
     <!-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 -->
     <script>
+      console.log(
+        "-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 --"
+      );
       const scores = [
         [83, 90, 70, 87],
         [87, 93, 62, 83],
         [98, 90, 77, 97],
       ];
+      const totals = [];
+      const averages = [];
+
+      for (let i = 0; i < scores.length; i++) {
+        let sum = 0;
+        for (let j = 0; j < scores[i].length; j++) {
+          sum = sum + scores[i][j];
+        }
+        totals.push(sum);
+        averages.push(sum / scores[i].length);
+      }
+
+      console.log(totals);
+      console.log(averages);
     </script>
   </body>
 </html>

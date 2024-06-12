@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체</title>
+  </head>
+  <body>
+    <!-- 객체 생성  -->
+
+    <script>
+      const person1 = {};
+      const person2 = new Object(); // 거의 안 씀!
+
+      console.log(person1);
+      console.log(person2);
+
+      // 변수 : 속성, 특징 등 추가
+      person1.name = "김현호";
+      console.log(person1);
+
+      person1.age = 28;
+      console.log(person1);
+
+      person2.name = "김현호2";
+      person2.age = 28;
+      console.log(person2);
+
+      // 함수 : 기능 등 추가
+
+      function sayhello() {
+        console.log(
+          "안녕안녕 반가워! 나는 " +
+            this.name +
+            "이야 나는 " +
+            this.age +
+            "살인데, 우리 친구할까?"
+        );
+      }
+
+      person1.hello = function () {
+        console.log(
+          "안녕하세요! 나는 " +
+            this.name +
+            "이고, 나이는 " +
+            this.age +
+            "살 이야!"
+        );
+      };
+      person1.hello();
+      console.log(person1.name);
+
+      const person3 = {
+        name: "귀여운김현호",
+        age: 20,
+        hello: function () {
+          console.log(
+            "안녕안녕 반가워! 나는 " +
+              this.name +
+              "이야 나는 " +
+              this.age +
+              "살인데, 우리 친구할까?"
+          );
+          sayhello: sayhello();
+        },
+      };
+      console.log(person3.age);
+      person3.hello();
+
+      // 객체 속 키(key) 삭제
+      delete person3.hello;
+      //   person3.hello();
+      console.log(person3);
+
+      //   const 객체명 = {
+      //     키 : 값;
+      //     키 : 값;
+      //     ...person1
+      //   }
+      //   객체에 추가 & 수정
+      //   객체명.키 = 값;
+
+      //   * 데이터에 접근
+      //   객체명.키; <-- 속성인 경우
+      //   객체명.키(); <-- 함수(기능)인 경우
+    </script>
+
+    <!-- 틀 1 : 생성자(constructor) 함수 -->
+    <script>
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.sayhello = function () {
+          console.log(
+            "안녕하세요. 저는 " + name + "이고, 나이는 " + age + "살 입니다."
+          );
+        };
+      }
+
+      const p1 = new Person("김현호", 35);
+      p1.sayhello();
+      console.log(p1);
+
+      const p2 = new Person("김순자", 80);
+      p2.sayhello();
+      console.log(p2);
+    </script>
+
+    <!-- 틀 2 : 클래스 -->
+    <script>
+      class Person2 {
+        // 생성자 -> 객체 생성하는 순간 바로 호출!
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        sayhello = function () {
+          console.log(
+            "안녕하세요. 저는 " +
+              this.name +
+              "이고, 나이는 " +
+              this.age +
+              "살 입니다."
+          );
+        };
+      }
+      const p3 = new Person2("김현호", 28); // 객체 생성!
+      console.log(p3);
+      p3.sayhello();
+    </script>
+  </body>
+</html>
