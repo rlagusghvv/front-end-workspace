@@ -1,0 +1,62 @@
+.container {
+  height: 600px;
+  position: relative;
+}
+.container img {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+  position: absolute;
+}
+
+.container img:nth-child(1) {
+  top: 0;
+  left: 0;
+  animation: moving1 1s infinite alternate;
+}
+
+.container img:nth-child(2) {
+  right: 0;
+  top: 0;
+  animation: moving2 2s infinite alternate-reverse;
+}
+.container img:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  animation: moving3 3s infinite alternate-reverse;
+}
+.container img:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  animation: moving4 4s infinite alternate;
+}
+.container img:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  animation: moving1 3s infinite alternate;
+}
+
+@keyframes moving1 {
+  to {
+    transform: translate(300px, 200px);
+  }
+}
+
+@keyframes moving2 {
+  to {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes moving3 {
+  to {
+    transform: translateY(-350px);
+  }
+}
+
+@keyframes moving4 {
+  to {
+    transform: translateX(-500px);
+  }
+}

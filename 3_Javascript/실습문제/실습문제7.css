@@ -1,0 +1,67 @@
+header {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.container {
+  height: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.buttons {
+  height: 3.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.buttons button {
+  height: 3rem;
+  width: 80px;
+  cursor: pointer;
+  font-weight: bolder;
+  border: none;
+}
+
+.buttons button.button {
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 10px;
+}
+
+#click {
+  background-color: black;
+  color: white;
+}
+
+#click:hover {
+  background-color: white;
+  color: black;
+}
+#restart {
+  background-color: white;
+  color: black;
+}
+#restart:hover {
+  background-color: black;
+  color: white;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
