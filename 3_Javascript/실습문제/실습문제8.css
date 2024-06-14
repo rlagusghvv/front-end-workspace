@@ -1,0 +1,40 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: bisque;
+  width: 70%;
+  height: 350px;
+  border: 1px gray solid;
+}
+
+li {
+  margin-top: 10px;
+  margin-left: 10px;
+  list-style: none;
+}
+
+input {
+  width: 200px;
+}
+
+p {
+  margin-left: 10px;
+}
+
+button {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 100px;
+}
+
+button:last-of-type {
+  margin-left: 0px;
+}
