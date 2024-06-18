@@ -27,6 +27,7 @@
       for (let i = 1; i <= 1000; i++) {
         if (i % 3 === 0) {
           j = j + i;
+          // j += i;
         }
       }
       console.log(j);
@@ -35,6 +36,9 @@
     <!-- Q3. 문자열의 문자들을 하나씩 출력하세요 -->
     <script>
       const str = "안녕하세요. 반갑습니다!";
+      // // for (const value of str){
+      //   console.log(value);
+      // } * value 값을 리턴하는 for of !!
       const print2 = [];
       console.log("-- Q3. 문자열의 문자들을 하나씩 출력하세요 --");
       for (let i = 0; i < str.length; i++) {
@@ -47,13 +51,27 @@
     <script>
       console.log("-- Q4. 배열 값 중 최대값을 출력하세요 --");
       const nums = [3, 7, 12, 5, 3];
-      let maxnum = nums[0];
-      for (let i = 0; i < nums.length; i++) {
-        if (nums[i] > maxnum) {
-          maxnum = nums[i];
-        }
-      }
-      console.log(maxnum);
+      nums.sort((a, b) => a - b); // [3, 3, 5, 7, 12]
+      console.log(nums[nums.length - 1]); // 정렬을 사용하는 방법!
+
+      // 반복문을 사용하는 방법!
+      // let maxnum = nums[0];
+      // for (let i = 0; i < nums.length; i++) {
+      //   if (nums[i] > maxnum) {
+      //     maxnum = nums[i];
+      //   }
+      // }
+      // max : 3, num : 3
+      // max : 3, num : 7 -> max ; 7
+      // max : 7, num : 12 -> max : 12
+      // max : 12, num : 5
+      // max : 12, num : 3
+      // result = max : 12
+      // console.log(maxnum);
+
+      // 내장 객체 Math를 사용하는 방법
+      // console.log(Math.max(...nums));
+      // ... -> 해당하는 배열의 값들을 나열해줌
     </script>
 
     <!-- Q5. 1 ~ 10 정수 중 소수(1과 자기자신)를 출력하세요
@@ -61,13 +79,22 @@
     -->
     <script>
       console.log("-- Q5. 1 ~ 10 정수 중 소수(1과 자기자신)를 출력하세요--");
-      const print3 = [];
-      for (let i = 1; i <= 10; i++) {
-        if (i === 2 || i === 3 || (i !== 1 && i % 2 !== 0 && i % 3 !== 0)) {
-          print3.push(i);
+
+      for (let i = 2; i <= 10; i++) {
+        for (let j = 2; j <= i; j++) {
+          if (i % j === 0) {
+            if (i !== j) break;
+            console.log(i);
+          }
         }
       }
-      console.log(print3);
+      // const print3 = [];
+      // for (let i = 1; i <= 10; i++) {
+      //   if (i === 2 || i === 3 || (i !== 1 && i % 2 !== 0 && i % 3 !== 0)) {
+      //     print3.push(i);
+      //   }
+      // }
+      // console.log(print3);
     </script>
 
     <!-- Q6. 배열 안의 데이터를 모두 2배로 만들어서 출력하세요 -->
@@ -80,6 +107,11 @@
         return value * 2;
       });
       console.log(numsD);
+
+      // 반복문을 사용하는 방법
+      // for (const num of nums2){
+      //   console.log(num * 2);
+      // }
     </script>
 
     <!-- Q7. 배열에 있는 데이터들로 합계와 평균을 출력하세요 -->
@@ -99,6 +131,13 @@
           num3A +
           " 입니다."
       );
+
+      // reduce : 하나의 결과값을 반환한다.
+      // 배열.reduce((누적된 값, 값, 인덱스, 배열) => {}, 초기값);
+      // reduce 함수를 사용하는 방법
+      // // sum3 = nums3.reduce((ac, num) => {
+      //    return ac + num;
+      // });
     </script>
 
     <!-- Q8. 두 배열의 각 데이터의 곱셈을 한 데이터들로 이루어진 새로운 배열을 생성하여 출력하세요 -->
@@ -114,6 +153,12 @@
         result1[i] = a1[i] * b1[i];
       }
       console.log(result1);
+      /*
+      for - in 문 사용! - 인덱스를 리턴!
+      for (const index in a1) {
+        result1.push(a1[index] * b1[index]);
+      }
+      */
     </script>
 
     <!-- Q9. 두 배열의 데이터 값이 서로 같은 데이터들만 이루어진 새로운 배열을 생성하여 출력하세요
@@ -132,6 +177,20 @@
         }
       }
       console.log(c2);
+
+      /*
+      // forEach : 값을 하나씩 가져올 수 있다.
+      // 배열.forEach ((값, 인덱스, 배열) => {});
+
+      a2.forEach((a) => {
+        // a값은 데이터 b2는 배열 
+        -> a값이 b2에 있는지 확인!
+        if (b2.includes(a)){
+          c2.push(a);
+        }
+      });
+      console.log(c2);
+      */
     </script>
 
     <!-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 -->
