@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/4_jQuery/01_선택자.js"></script>
+    <title>01_선택자</title>
+  </head>
+  <body>
+    <h2>1. 태그 선택자</h2>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JAVASCRIPT</p>
+    <h5>MYSQL</h5>
+    <h5>JAVA</h5>
+    <h5>JDBC, Servelt, JSP</h5>
+    <h5>Spring</h5>
+
+    <h2>2. 아이디 선택자</h2>
+    <h3 id="id1">아이디 1</h3>
+    <h3 id="id2">아이디 2</h3>
+
+    <h2>3. 클래스 선택자</h2>
+    <h2 class="item">클래스 1</h2>
+    <h2 class="item">클래스 2</h2>
+    <h2 class="item">클래스 3</h2>
+
+    <h2>4. 자식, 자손 선택자</h2>
+    <div style="border: 1px solid">
+      조상
+      <ul>
+        자식1
+        <!-- li -> color: green -->
+        <li>div의 자손이면서 ul의 자식 1</li>
+        <li>div의 자손이면서 ul의 자식 2</li>
+        <!-- 클래스가 ch -> background-color : lime -->
+        <li class="ch">div의 자손이면서 ul의 자식 3</li>
+        <li class="ch">div의 자손이면서 ul의 자식 4</li>
+        <li>
+          <!-- h3 -> color indianred -->
+          <h3>div/ul의 자손이면서 li의 자식</h3>
+        </li>
+      </ul>
+      <!-- h3이면서 클래스가 ch인 -> color : violet -->
+      <h3 class="ch">자식 2</h3>
+      <h3 class="ch">자식 3</h3>
+      <!-- h3 공통 : background-color : khaki -->
+    </div>
+
+    <h2>5. 속성 선택자</h2>
+    <div id="div1">
+      <input type="text" />
+      <input type="number" class="test1 test2" />
+      <input type="radio" />
+      <input type="checkbox" />
+      <input type="button" value="버튼" class="test3" />
+    </div>
+
+    <h2>6. 입력 양식 선택자</h2>
+    <div id="div2">
+      <input type="text" />
+      <input type="button" />
+      <input type="checkbox" />
+      <input type="file" />
+    </div>
+
+    <h2>7. 입력 양식 상태에 대한 선택자</h2>
+    <div id="id3">
+      <input type="text" />
+      <input type="text" disabled />
+      <br />
+      <input type="button" value="활성화" />
+      <input type="button" value="비활성화" disabled />
+      <br />
+      <label><input type="checkbox" checked />게임</label>
+      <label><input type="checkbox" />음악</label>
+      <br />
+      <label for="national">국가 : </label>
+      <select id="national">
+        <option value="한국">한국</option>
+        <option value="미국">미국</option>
+        <option value="중국">중국</option>
+        <option value="일본">일본</option>
+      </select>
+      <br />
+      <input type="text" id="result" readonly />
+    </div>
+  </body>
+</html>

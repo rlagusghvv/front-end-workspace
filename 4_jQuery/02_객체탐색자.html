@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>1. Filtering 메서드</h2>
+    <p>선택자로 지정한 객체 그룹에서 위치를 가지고 객체를 선택하는 메서드</p>
+
+    <h4 class="test">test-1</h4>
+    <h4 class="test">test-2</h4>
+    <h4>test-3</h4>
+    <h4 class="test">test-4</h4>
+
+    <h2>2. Ancestors & Descendants 메서드</h2>
+    <p>Ancestors : 선택된 요소의 상위 요소들을 선택할 수 있는 메서드</p>
+    <p>Descendants : 선택된 요소들의 하위 요소들을 선택할 수 있는 메서드</p>
+
+    <div class="wrap">
+      <div>
+        div
+        <ul>
+          ul
+          <li>
+            li
+            <span>span</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        div
+        <p>
+          p
+          <span>span </span>
+        </p>
+      </div>
+    </div>
+
+    <h2>3. Sideways 메서드</h2>
+    <p>선택된 요소와 같은 레벨에 있는 요소를 선택할 수 있는 메서드</p>
+
+    <div class="wrap2">
+      <p>p</p>
+      <span>span</span>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <p>p</p>
+    </div>
+    <script src="/02_객체탐색자.js"></script>
+  </body>
+</html>

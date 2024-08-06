@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>1. Content 설정</h2>
+    <h3>html()</h3>
+    <p>content 영역의 태그와 텍스트 모두 가져온다.</p>
+    <h4 id="content1"><a>네이버</a></h4>
+    <h4 id="content2"></h4>
+    <h3>text()</h3>
+    <p>content 영역의 텍스트만 가져온다.</p>
+    <h4 id="content3"><a>네이버</a></h4>
+    <h4 id="content4"></h4>
+
+    <h2>2. 요소 추가</h2>
+    <div id="area1"></div>
+    <hr />
+    <div id="area2"><span>A</span></div>
+
+    <style>
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: sandybrown;
+        margin: 10px 0;
+      }
+
+      .bg-hotpink {
+        background-color: hotpink;
+      }
+    </style>
+    <h2>3. 요소 복제</h2>
+    <div id="clone-test">
+      <div id="item1" class="item"></div>
+      <button id="btn1">복제</button>
+      <div id="clone-result"></div>
+    </div>
+
+    <h2>4. 요소 제거</h2>
+    <div id="remove-test">
+      <div id="item2" class="item"></div>
+    </div>
+    <button id="remove">remove</button>
+    <button id="detach">detach</button>
+    <button id="empty">empty</button>
+    <div id="remove-result"></div>
+
+    <h2>5. 배열 관리</h2>
+    <div id="each-test"></div>
+    <script src="/03_객체조작.js"></script>
+  </body>
+</html>

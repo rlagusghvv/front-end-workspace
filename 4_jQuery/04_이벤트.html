@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .area {
+        width: 150px;
+        height: 150px;
+        border: 1px solid;
+        margin-bottom: 5px;
+        text-align: center;
+        line-height: 140px;
+      }
+    </style>
+
+    <h2>1. 이벤트 연결</h2>
+    <h3>one</h3>
+    <div id="area1" class="area"></div>
+
+    <h3>on</h3>
+    <div id="area2" class="area"></div>
+
+    <h2>2. 키보드 이벤트</h2>
+    <h3>keydown, keypress, keyup</h3>
+    <textarea id="textarea1" cols="40" rows="5"></textarea>
+
+    <h3>글자 수 세기</h3>
+    <div>
+      <p><span id="counter">0</span> / <span id="maxLength">70</span></p>
+    </div>
+    <textarea id="textarea2" cols="70" rows="5"></textarea>
+
+    <h3>아이디 조건 확인</h3>
+    <p>
+      - 첫 글자는 반드시 영문 소문자<br />
+      - 영문 소문자와 숫자로만 이루어진다<br />
+      - 총 4 ~ 12 글자
+    </p>
+    아이디 : <input type="text" id="userId" />
+    <span id="idCheck"></span>
+
+    <h2>3. trigger() 메서드</h2>
+    <div id="area3" class="area">Click : <span id="counter2">0</span></div>
+    <button id="btn">실행 확인</button>
+    <script src="/04_이벤트.js"></script>
+  </body>
+</html>
