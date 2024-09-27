@@ -1,0 +1,2 @@
+node_modules
+# node_modules는 올리지 않음! 다른 컴퓨터에서 작업에 필요한 모듈을 가져오고 싶을 때는 npm i로 package.json 내에 디펜던시 긁어오기

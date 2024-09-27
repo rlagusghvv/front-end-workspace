@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- JSX(JavaScript Syntax Extension)-->
+    <div id="root"></div>
+    <script type="text/babel">
+      let count = 0;
+      const setCount = () => {
+        count++;
+        ReactDOM.render(<Container />, root);
+      };
+      const Container = () => {
+        return (
+          <div>
+            <h1>Total Clicks : {count}</h1>
+            <button onClick={setCount}>Click me</button>
+          </div>
+        );
+      };
+      ReactDOM.render(<Container />, root);
+    </script>
+  </body>
+</html>

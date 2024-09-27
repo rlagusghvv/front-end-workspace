@@ -1,0 +1,30 @@
+/* 변수 */
+$bg-color: coral;
+$color: black;
+$padding: 20px;
+
+/* 믹스인 */
+@mixin text-center {
+  text-align: center;
+}
+
+/* 상속 */
+.border {
+  border: 10px solid black;
+}
+
+.scss-style {
+  @extend .border;
+  @include text-center;
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+
+  /* 중첩 */
+  h1 {
+    color: purple;
+    &:hover {
+      color: red;
+    }
+  }
+}
